@@ -13,9 +13,17 @@
   }
 }
 
+.App-title {
+  font-size: 1em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
