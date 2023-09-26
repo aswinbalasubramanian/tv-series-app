@@ -3,18 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
-const getCurrentDate = () =>{
-  const date = new Date();
-  return date.toDateString();
-};
-
-const greeting = <h1>Hello World! Current Date : { getCurrentDate() }</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>  
+    <BrowserRouter><App/></BrowserRouter>
   </React.StrictMode>
 );
 

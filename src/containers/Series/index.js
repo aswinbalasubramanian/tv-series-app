@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader';
+import Intro from '../../components/Intro';
 
 class Series extends Component{
 
@@ -26,11 +27,13 @@ class Series extends Component{
         const { series, seriesName, isFetching } = this.state;
 
         return(
+
             <div>The length of the series array : { this.state.series.length }
             <div>
+                <Intro message = "Here you can find all your loved movies" />
                 <input value ={seriesName} 
                        type="text" 
-                       onChange={ this.onSeriesInputChanges }></input>
+                       onChange={ this.onSeriesInputChanges } />
             </div>
             <div>
                 {
@@ -44,10 +47,10 @@ class Series extends Component{
                     <p>No TV series found for this name </p>
                 }
                 {
-                    isFetching && < Loader /> 
+                    isFetching && <Loader />
                 }
                 {
-                    !isFetching && <SeriesList list={this.state.series} /> && <Loader/>
+                    !isFetching && <SeriesList list={this.state.series} /> 
                 }
             </div>
             
